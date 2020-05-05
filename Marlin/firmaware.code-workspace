@@ -1,7 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "D:\\3dPrint\\EWE\\Software\\Marlin2.0"
+		},
+		{
+			"path": "D:\\3dPrint\\EWE\\Software\\adopted_PWM_PID_regulator"
 		}
 	],
 	"settings": {}
