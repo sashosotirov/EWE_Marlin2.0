@@ -78,7 +78,7 @@
   #define SERVO2_PIN        5
 #endif
 #ifndef SERVO3_PIN
-  #define SERVO3_PIN        4
+  #define SERVO3_PIN        -1
 #endif
 
 //
@@ -154,6 +154,13 @@
   #define E1_CS_PIN        44
 #endif
 
+#define E2_STEP_PIN        36
+#define E2_DIR_PIN         34
+#define E2_ENABLE_PIN      30
+#ifndef E2_CS_PIN
+  #define E2_CS_PIN        44
+#endif
+
 //
 // Temperature Sensors
 //
@@ -165,6 +172,9 @@
 #endif
 #ifndef TEMP_BED_PIN
   #define TEMP_BED_PIN     14   // Analog Input
+#endif
+#ifndef TEMP_2_PIN
+  #define TEMP_2_PIN       13   // Analog Input
 #endif
 
 // SPI for Max6675 or Max31855 Thermocouple
@@ -208,7 +218,7 @@
 #endif
 
 #define HEATER_0_PIN       RAMPS_D10_PIN
-#define HEATER_1_PIN       6
+#define HEATER_1_PIN       9
 #define HEATER_2_PIN       9
 
 #if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
@@ -235,7 +245,7 @@
   #elif EITHER(IS_RAMPS_EEF, IS_RAMPS_SF)         // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                  // Hotend, Hotend, Bed
-    #define FAN_PIN         4                  // IO pin. Buffer needed
+    #define FAN_PIN         -1                  // IO pin. Buffer needed
   #else                                        // Non-specific are "EFB" (i.e., "EFBF" or "EFBE")
     #define FAN_PIN        RAMPS_D9_PIN
   #endif
@@ -253,7 +263,7 @@
 
 // RAMPS 1.4 DIO 4 on the servos connector
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN    4
+  #define FIL_RUNOUT_PIN    -1
 #endif
 
 #ifndef PS_ON_PIN

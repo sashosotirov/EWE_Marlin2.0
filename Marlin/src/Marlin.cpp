@@ -822,6 +822,8 @@ void setup() {
 
   HAL_init();
 
+  OUT_WRITE(17, HIGH);
+
   #if HAS_DRIVER(L6470)
     L6470.init();         // setup SPI and then init chips
   #endif
